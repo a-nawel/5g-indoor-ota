@@ -77,7 +77,7 @@ services are healthy before moving on.
 
 ```
 cd /var/tmp/oai-cn5g-fed/docker-compose
-sudo python3 ./core-network.py --type start-mini --fqdn no --scenario 1
+sudo python3 ./core-network.py --type start-basic --scenario 1
 ```
 
 In yet another session, start following the logs for the AMF. This way you can
@@ -152,10 +152,10 @@ LOWLAT_IMG = "urn:publicid:IDN+emulab.net+image+PowderTeam:U18LL-SRSLTE"
 UBUNTU_IMG = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU18-64-STD"
 COTS_UE_IMG = "urn:publicid:IDN+emulab.net+image+PowderTeam:cots-base-image"
 COMP_MANAGER_ID = "urn:publicid:IDN+emulab.net+authority+cm"
-# old hash from branch bandwidth-testing-abs-sr-bsr-multiple_ue
-#TODO: check if merged to develop or develop now supports multiple UEs
-DEFAULT_NR_RAN_HASH = "509168255153690397626d85cdd4c4aec0859620" # 2022.wk26
-DEFAULT_NR_CN_HASH = "v1.2.1"
+# hash includes fix for avx build patch issue
+#TODO: check if merged to develop
+DEFAULT_NR_RAN_HASH = "565b8482f926bea13b5b72e4a6651032fdac7083"
+DEFAULT_NR_CN_HASH = "v1.4.0"
 OAI_DEPLOY_SCRIPT = os.path.join(BIN_PATH, "deploy-oai.sh")
 
 
