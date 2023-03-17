@@ -253,8 +253,8 @@ pc.defineParameter(
 indoor_ota_x310s = [
     ("ota-x310-1",
      "USRP X310 #1"),
-    ("ota-x310-2",
-     "USRP X310 #2"),
+#    ("ota-x310-2",
+#     "USRP X310 #2"),
     # ("ota-x310-3",
     #  "USRP X310 #3"),
     # ("ota-x310-4",
@@ -320,7 +320,8 @@ x310_node_pair(0, params.x310_radio)
 
 # require all indoor OTA nucs for now
 # for b210_node in ["ota-nuc1", "ota-nuc2", "ota-nuc3", "ota-nuc4"]:
-for b210_node in ["ota-nuc1", "ota-nuc2"]:
+#for b210_node in ["ota-nuc1", "ota-nuc2"]:
+for b210_node in ["ota-nuc2"]:
     b210_nuc_pair(b210_node)
 
 for frange in params.freq_ranges:
